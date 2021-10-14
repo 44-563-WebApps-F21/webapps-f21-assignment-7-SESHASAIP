@@ -14,10 +14,11 @@
  
  let ids=["img-0","img-1","img-2","img-3","img-4","img-5","img-6","img-7","img-8","img-9","img-10","img-11","img-12","img-13","img-14","img-15","img-16","img-17","img-18","img-19","img-20","img-21","img-22","img-23"];
  var triesCount=0
- let a=Math.floor(Math.random())
+ let a=Math.floor(Math.random()*23)
  var animalLocation=a
  var id
  var aser
+ 
  function check(index)
  {
     for(let i=0;i<ids.length;i++)
@@ -39,6 +40,8 @@
     console.log(index)
     aser=distance(index,animalLocation)
     document.getElementById("distance").innerHTML ="distance between the animallocation and clicked ="+aser
+    newgame();
+    
  }
  function distance(pos1, pos2)
  {
@@ -69,7 +72,12 @@
     }
    return Math.max(Math.abs(valx1-valx2),Math.abs(valy1-valy2))
 }
-
+function newgame() {
+    document.getElementById("tires").innerHTML = 0
+    let a=Math.floor(Math.random()*23)
+    animalLocation=a
+}
+           
  
 </script>   
 </head>
