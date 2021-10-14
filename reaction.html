@@ -19,7 +19,8 @@
         }
         function startTime()
         {
-          for(let itr=0;itr<4;itr++)
+           let itr = Math.floor(Math.random() * (10 - 2 + 1) + 2)
+          for( itr=0;itr<10;itr++)
           {
             setTimeout(function () {
               document.getElementById("countdown").innerHTML = "Count is " + itr;

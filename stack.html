@@ -42,6 +42,7 @@
 		<button onclick="makeNewDiv()">Push value</button>
         <button onclick="popItem()">pop value</button>
         <button onclick="zap()">Zap</button>
+        <button onclick="unique()">Unique</button>
 	
 	
 </body>
@@ -76,6 +77,22 @@ function makeNewDiv() {
         }
         console.log("We are getting rid of allelements with '" + y + "'")
     }
+    function unique(){
+            stackItems = document.getElementsByClassName("stack")
+            y = document.getElementById("texted").value
+            for(y=0; y<stackItems.length;y++){
+                for(k=0;k<stackItems.length;k++){
+                    if(stackItems[y].innerHTML==stackItems[y].innerHTML){
+                        if(y>k){
+                            stackItems[k].remove()
+                        }
+                        if(y<k){
+                            stackItems[i].remove()
+                        }
+                    }
+                }
+            }
+        }
     
 
 </script>
