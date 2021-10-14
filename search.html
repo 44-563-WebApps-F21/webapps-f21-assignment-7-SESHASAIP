@@ -40,7 +40,7 @@
     console.log(index)
     aser=distance(index,animalLocation)
     document.getElementById("distance").innerHTML ="distance between the animallocation and clicked ="+aser
-    newgame();
+    
     
  }
  function distance(pos1, pos2)
@@ -89,8 +89,9 @@ function newgame() {
     <h1>Animal hunt by HEMA SESHA SAI PAMULAPATI</h1>
     </header>
     <div style="background-color: rgb(140, 127, 255) ;font-style: oblique;font-size: x-large;"> "Click on the squares to search for wild life" </div>
-        <div style="background-color: aquamarine ;font-style: oblique;" id="tires"> “Number of triesis zero"  </div>
+        <div style="background-color: aquamarine ;font-style: oblique;" id="tires"> “Number of tries is zero"  </div>
         <div style="background-color: rgb(255, 221, 127) ;font-style: italic;"id="distance">“Distance is unknown.”</div>
+        <button onclick=newgame()>reset</button>
        
     
         <div class="container">
