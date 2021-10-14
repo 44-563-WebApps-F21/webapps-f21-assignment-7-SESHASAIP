@@ -78,20 +78,15 @@ function makeNewDiv() {
         console.log("We are getting rid of allelements with '" + y + "'")
     }
     function unique(){
-            stackItems = document.getElementsByClassName("stack")
-            y = document.getElementById("texted").value
-            for(y=0; y<stackItems.length;y++){
-                for(k=0;k<stackItems.length;k++){
-                    if(stackItems[y].innerHTML==stackItems[y].innerHTML){
-                        if(y>k){
-                            stackItems[k].remove()
-                        }
-                        if(y<k){
-                            stackItems[i].remove()
-                        }
-                    }
-                }
-            }
+        var items = document.getElementsByClassName("stack")
+		for (var i = 0; i < items.length; i++) {
+			for (var j = i + 1; j < items.length; j++) {
+				if (items[i].innerHTML == items[j].innerHTML) {
+					items[i].remove()
+					j--; i--
+				}
+			}
+		}
         }
     
 
